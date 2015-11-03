@@ -1,5 +1,13 @@
-(function ( $ ) {
- 
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        // Register as an anonymous AMD module:
+        define(['jquery'], factory);
+    } else {
+        // Browser globals:
+        factory(window.jQuery);
+    }
+}(function ($) {
     $.fn.coreCrop = function( options ) {
  
         var defaultOptions = {
@@ -239,7 +247,6 @@
                 if (state == "create") {
                     var me = this;
 
-                    console.log($selectCrop);
                     $selectCrop.resizable({
                         containment: "parent",
                         aspectRatio: this.options.ration,
@@ -304,5 +311,5 @@
         return new ImageBox(options);
  
     };
- 
-}( jQuery ));
+}));
+
