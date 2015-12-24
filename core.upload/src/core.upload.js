@@ -32,6 +32,7 @@
             var c = a('<form  method="' + b.method + '" enctype="multipart/form-data" action="' + b.url + '"> <input name="' + b.name + '" type="file" accept="' + b.acceptEx + '" /></form>'),
                 h = c.find("input[name=" + b.name + "]");
             var w = e.attr('width') || e.width();
+            var ht = e.attr('height') || e.height();
 
             h.css({
                 display: "block",
@@ -39,7 +40,7 @@
                 left: 0,
                 top: 0,
                 width: w,
-                height: e.height(),
+                height: ht,
                 "font-size": "100pt",
                 cursor: "hand",
                 opacity: 0,
