@@ -192,7 +192,7 @@
 
                         },
                         extError: function() {
-                            alert("文件类型不支持: " + (Options.extensions.join(",")).toString());
+                            alert("只支持文件类型: " + (Options.extensions.join(",")).toString());
                         }
                     });
                     element.find(":file[name='" + Options.InputOfFile + "']").mouseenter(function() {
